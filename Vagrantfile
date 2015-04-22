@@ -72,7 +72,7 @@ Vagrant.configure(2) do |config|
   config.vm.network :private_network, ip: "192.168.33.21"
   config.vm.hostname = "dev.pachnanda.org"
   config.hostsupdater.aliases = ["alias.pachnanda.com", "alias2.pachnanda.com"]
-  config.vm.synced_folder "../workspace", "/apps/"
+  config.vm.synced_folder  "/Users/macbookpro/workspace" , "/apps/"
   # Now let puppet do its thing.
     config.vm.provision :puppet do |puppet|
       puppet.manifests_path = 'puppet/manifests'
